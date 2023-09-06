@@ -45,7 +45,7 @@ env:
 
   # 🖊️ EDIT to change the image registry settings.
   # Registries such as GHCR, Quay.io, and Docker Hub are supported.
-  IMAGE_REGISTRY: quay.io/btenneti
+  IMAGE_REGISTRY: quay.io/btenneti/
   IMAGE_REGISTRY_USER: ${{ github.actor }}
   IMAGE_REGISTRY_PASSWORD: ${{ github.token }}
 
@@ -62,7 +62,7 @@ jobs:
   openshift-ci-cd:
     name: Build and deploy to OpenShift
     # ubuntu-20.04 can also be used.
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
     environment: production
 
     outputs:
